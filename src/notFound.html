@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
+</head>
+<style>
+
+    body{
+      font-family: 'helvetica-neue',sans-serif;
+    }
+
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    .slide-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+
+.slide-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 50px); 
+  font-size: 24px; 
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0; 
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+
+.swiper-slide-active .slide-text {
+  opacity: 1;
+  transform: translate(-50%, 0); 
+}
+
+    .swiper-button-prev,
+    .swiper-button-next{
+      color: black; 
+      background-color: white;
+      width: 16px;
+      height: 16px;
+      font-weight: bold;
+      font-size: 10px;
+      padding: 20px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after{
+      font-size: 16px;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #898587;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: #202020;
+        width: 24px;
+        height: 8px;
+        border-radius: 64px;
+        transition: width .2s ease;
+    }
+
+    @media (min-width: 1279px) {
+    .swiper-button-prev,
+    .swiper-button-next{
+      color: black; 
+      background-color: white;
+      width: 16px;
+      height: 16px;
+      font-weight: bold;
+      font-size: 10px;
+      padding: 20px;
+    
+    }
+}
+
+
+    .image-container {
+          position: relative;
+          height: 300px;
+    }
+
+    .image-container img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+    }
+
+    .mobile-search {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.myNewSwiper .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .myNewSwiper  .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .myNewSwiper   .swiper-slide {
+      width: 65%;
+    }
+
+
+</style>
+</head>
+<body class="bg-[#F7F6F2]">
+  <header class="mb-0">
+    <div class="bg-white w-full  px-4">
+      <div class="cursor-default mx-auto flex items-center justify-between h-full flex items-center text-black font-avenir text-xs py-3">
+
+          <div class="hidden xl:block">
+           <img src="./img/Logo.svg" alt="">
+          </div>
+          <div class="flex items-center gap-2 xl:hidden">
+            <button class=" " onclick="showMobileMenu()">
+              <div id="mobileMenuOpen" style="display: block">
+                <img src="./img/ssd.svg" alt="">
+              </div>
+              <div id="menuButtonX" style="display: none">
+                <img src="./img/Icons.svg" alt="">
+                </div>
+            </button>
+ 
+            <img src="./img/Frame 39988.svg" alt="">
+           </div>
+          <div class="text-[#C2C2C2] text-center space-x-4 hidden xl:block font-helvetica-neue font-normal"  style="    text-transform: uppercase;font-feature-settings: 'case' on">
+              <a href="" class="active:text-black font-NEOMETRA">მთავარი</a>
+             
+              <a href="" class="active:text-black">სიახლეები</a>
+            
+              <a href="" class="active:text-black">საერთაშორისო სიახლეები</a>
+            
+              <a href="" class="active:text-black">ბიზნესი</a>
+             
+              <a href="" class="active:text-black">ანალიტიკა</a>
+            
+              <a href="" class="active:text-black">ტრენდები</a>
+          </div>
+          <div class="text-right flex items-center space-x-4 justify-end">
+              <a  href="/en/" class="text-sm text-[#202020] rounded-[4px] border border-[#FAFAFA] p-[8px]">EN</a>
+              <div class="relative hidden xl:block">
+                <input type="text"  class="input block w-full  py-[10px] pl-2 rounded-[4px] border border-[#FAFAFA]  border text-gray-950 appearance-none" placeholder="ძებნა...">
+                <button class="absolute top-2 right-[10px]">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.0625 15.625C12.6869 15.625 15.625 12.6869 15.625 9.0625C15.625 5.43813 12.6869 2.5 9.0625 2.5C5.43813 2.5 2.5 5.43813 2.5 9.0625C2.5 12.6869 5.43813 15.625 9.0625 15.625Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.7031 13.7032L17.5 17.5001" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+              </div>
+              <button class="bg-[#fff] w-8 h-8 flex space-x-2 items-center justify-center rounded-md mr-3 xl:hidden"
+              onclick="showMobileSearch()">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M14.7638 15.8607C12.022 18.0567 8.00872 17.8838 5.46714 15.3422C2.74012 12.6152 2.74012 8.19385 5.46714 5.46684C8.19416 2.73981 12.6155 2.73982 15.3425 5.46684C17.8841 8.00841 18.057 12.0217 15.861 14.7635L21.1946 20.097C21.4976 20.4001 21.4976 20.8913 21.1946 21.1943C20.8916 21.4973 20.4004 21.4973 20.0974 21.1943L14.7638 15.8607ZM6.56441 14.245C4.44339 12.124 4.44339 8.68512 6.56441 6.5641C8.68542 4.44309 12.1243 4.44309 14.2453 6.5641C16.3647 8.68356 16.3663 12.1189 14.2499 14.2403C14.2484 14.2418 14.2468 14.2434 14.2453 14.245C14.2437 14.2465 14.2422 14.2481 14.2406 14.2496C12.1192 16.366 8.68387 16.3644 6.56441 14.245Z"
+                      fill="#1F1F1F" />
+              </svg>
+          </button>
+
+              </div>
+      </div>
+
+</header>
+<div class="mobile-search" style="display: none;" id="mobileSearch">
+  <div class="flex flex-col items-center h-full">
+      <div class="flex flex-row items-center bg-white px-2 py-3 w-full">
+        <button>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7638 15.8607C12.022 18.0567 8.00872 17.8838 5.46714 15.3422C2.74012 12.6152 2.74012 8.19385 5.46714 5.46684C8.19416 2.73981 12.6155 2.73982 15.3425 5.46684C17.8841 8.00841 18.057 12.0217 15.861 14.7635L21.1946 20.097C21.4976 20.4001 21.4976 20.8913 21.1946 21.1943C20.8916 21.4973 20.4004 21.4973 20.0974 21.1943L14.7638 15.8607ZM6.56441 14.245C4.44339 12.124 4.44339 8.68512 6.56441 6.5641C8.68542 4.44309 12.1243 4.44309 14.2453 6.5641C16.3647 8.68356 16.3663 12.1189 14.2499 14.2403C14.2484 14.2418 14.2468 14.2434 14.2453 14.245C14.2437 14.2465 14.2422 14.2481 14.2406 14.2496C12.1192 16.366 8.68387 16.3644 6.56441 14.245Z" fill="#1F1F1F"></path>
+        </svg>
+        </button>
+        
+          <input type="text" class="w-full bg-transparent outline-none text-black p-2 focus:outline-none" placeholder="ძებნა" id="news-search-mobile-input">
+          <div class="flex items-center">
+              <button class="w-10	h-10 bg-white flex items-center justify-center text-black rounded-lg" onclick="showMobileSearch()">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="5.78906" y="4" width="20.0961" height="1.67044" rx="0.835222" transform="rotate(45 5.78906 4)" fill="#1F1F1F"></rect>
+                      <rect x="4" y="18.3375" width="20.0961" height="1.66961" rx="0.834803" transform="rotate(-45 4 18.3375)" fill="#1F1F1F"></rect>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="mobile-menu bg-white hidden"  id="mobileMenu">
+  <div class="flex flex-col items-center justify-between h-[100vh] py-6">
+    <div class="flex flex-col gap-3 items-center overflow-y-scroll scroll-bar text-[#C2C2C2] font-helvetica-neue font-normal w-full px-3.5"
+   style="    text-transform: uppercase;font-feature-settings: 'case' on">
+
+        <a href="" class="active:text-black border border-[#F0F0F0] w-full text-center py-4">მთავარი</a>
+                    
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">სიახლეები</a>
+
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">საერთაშორისო სიახლეები</a>
+
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">ბიზნესი</a>
+
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">ანალიტიკა</a>
+
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">ტრენდები</a>
+      </div>
+  </div>
+</div>
+
+<section class="px-4">
+    <div class="flex flex-row min-h-screen justify-center items-center px-16">
+        <div class="flex flex-col items-center">
+            <p class="text-md text-[#000000] text-center font-medium">გვერდი ვერ მოიძებნა</p>
+            <h1 class="text-[#202020] text-[160px] font-Umgeo font-semibold md:text-[200px] leading-none mb-8">404</h1>
+            <a href="" class="text-sm font-medium text-[#000] bg-white px-8 py-4 md:px-12 md:py-6 mt-20 ">მთავარ გვერძე დაბრუნება</a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="bg-white px-4 py-6 flex flex-col gap-28 md:gap-40">
+  <div class="flex flex-col gap-28 md:gap-0 items-start md:flex-row md:items-center justify-between">
+    <img src="./img/Logo.svg" alt="">
+
+   <div>
+    <p class="font-light text-[#202020]">გამოგვყევით
+    </p>
+    <div class="flex items-center gap-2">
+      <a href="" class="p-3"><img src="./img/uim_facebook-f.svg" alt=""></a>
+      <a href="" class="p-3"><img src="./img/icon-instagram.svg" alt=""></a>
+    </div>
+   </div>
+   </div>
+   <div>
+    <p class="font-normal text-[#5C5C5C]">2024 LCD all rights reserved</p>
+   </div>
+</footer>
+</body>
+<script>
+ 
+    function showMobileMenu() {
+        var mobileMenu = document.getElementById('mobileMenu');
+        var menuButtonX = document.getElementById('menuButtonX');
+        var mobileMenuOpen = document.getElementById('mobileMenuOpen');
+        var body = document.body;
+
+        if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+            mobileMenu.style.display = 'block';
+            menuButtonX.style.display = 'block';
+            mobileMenuOpen.style.display = 'none';
+            body.style.overflowY = "hidden";
+        } else {
+            mobileMenu.style.display = 'none';
+            menuButtonX.style.display = 'none';
+            mobileMenuOpen.style.display = 'block';
+            body.style.overflowY = "auto";
+        }
+
+        if (window.innerWidth < 1280) {
+      mobileMenu.style.display = isOpen ? 'block' : 'none';
+    } else {
+      mobileMenu.style.display = 'none';
+    }
+    }
+
+    function showMobileSearch() {
+        var mobileSearch = document.getElementById('mobileSearch');
+        var body = document.body;
+
+        if (mobileSearch.style.display === 'none' || mobileSearch.style.display === '') {
+            mobileSearch.style.display = 'block';
+            body.style.overflowY = "hidden";
+            document.getElementById("searchInput").focus();
+        } else {
+            mobileSearch.style.display = 'none';
+            body.style.overflowY = "auto";
+        }
+    }
+   
+
+    function handleResize() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileSearch = document.getElementById('mobileSearch');
+
+    if (window.innerWidth >= 1280) {
+      mobileMenu.style.display = 'none';
+      mobileSearch.style.display = 'none';
+    }
+  }
+
+  window.addEventListener('resize', handleResize);
+  handleResize();
+</script>
+</html>

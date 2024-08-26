@@ -1,8 +1,100 @@
 @font-face {
-    font-family: 'NEOMETRA';
-    src: url('/assets/NEOMETRA-FFP.ttf') format('embedded-opentype'),
-     url('/assets/NEOMETRA-FFP.ttf') format('truetype');
+    font-family: 'Helvetica Neue LT GEO';
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-25-UltLt.ttf') ;
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-25-UltLt.ttf')     format('truetype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-25-UltLt.ttf')   format('embedded-opentype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-25-UltLt.ttf')   format('ttf'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-25-UltLt.ttf') format('woff');
+    font-weight: 200; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT GEO';
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-35-Thin.ttf') ;
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-35-Thin.ttf')     format('truetype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-35-Thin.ttf')   format('embedded-opentype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-35-Thin.ttf')   format('ttf'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-35-Thin.ttf')  format('woff');
+    font-weight: 300; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT GEO';
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-45-Light.ttf') ;
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-45-Light.ttf')      format('truetype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-45-Light.ttf')    format('embedded-opentype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-45-Light.ttf')    format('ttf'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-45-Light.ttf')   format('woff');
+    font-weight: 400; 
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Helvetica Neue LT GEO';
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-55-Roman.ttf') ;
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-55-Roman.ttf')     format('truetype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-55-Roman.ttf')    format('embedded-opentype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-55-Roman.ttf')   format('ttf'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-55-Roman.ttf')  format('woff');
+    font-weight: 500; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT GEO';
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-65-Medium.ttf') ;
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-65-Medium.ttf')    format('truetype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-65-Medium.ttf')   format('embedded-opentype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-65-Medium.ttf')  format('ttf'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-65-Medium.ttf')  format('woff');
+    font-weight: 600; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT GEO';
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-75-Bold.ttf') ;
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-75-Bold.ttf')    format('truetype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-75-Bold.ttf')    format('embedded-opentype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-75-Bold.ttf')   format('ttf'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-75-Bold.ttf')   format('woff');
+    font-weight: 700; 
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Helvetica Neue LT GEO';
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-85-Heavy.ttf') ;
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-85-Heavy.ttf')   format('truetype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-85-Heavy.ttf')   format('embedded-opentype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-85-Heavy.ttf')   format('ttf'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-85-Heavy.ttf')  format('woff');
+    font-weight: 800; 
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Helvetica Neue LT GEO';
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-95-Black.ttf') ;
+    src: url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-95-Black.ttf')  format('truetype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-95-Black.ttf')  format('embedded-opentype'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-95-Black.ttf')  format('ttf'),
+    url('./assets/fonts/helvetica-neue/Helvetica-Neue-LT-GEO-95-Black.ttf')  format('woff');
+    font-weight: 900; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Umgeo';
+    src: url('./assets/fonts/umgeo/UMgeoBold-Bold.woff') format('woff'),
+         url('./assets/fonts/umgeo/UMgeoBold-Bold.ttf') format('truetype'),
+         url('./assets/fonts/umgeo/UMgeoBold-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
-}
+  }
+  

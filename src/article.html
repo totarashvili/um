@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
+</head>
+<style>
+
+    body{
+      font-family: 'helvetica-neue',sans-serif;
+    }
+
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    .slide-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+
+.slide-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 50px); 
+  font-size: 24px; 
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0; 
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+
+.swiper-slide-active .slide-text {
+  opacity: 1;
+  transform: translate(-50%, 0); 
+}
+
+    .swiper-button-prev,
+    .swiper-button-next{
+      color: black; 
+      background-color: white;
+      width: 16px;
+      height: 16px;
+      font-weight: bold;
+      font-size: 10px;
+      padding: 20px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after{
+      font-size: 16px;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #898587;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: #202020;
+        width: 24px;
+        height: 8px;
+        border-radius: 64px;
+        transition: width .2s ease;
+    }
+
+    @media (min-width: 1279px) {
+    .swiper-button-prev,
+    .swiper-button-next{
+      color: black; 
+      background-color: white;
+      width: 16px;
+      height: 16px;
+      font-weight: bold;
+      font-size: 10px;
+      padding: 20px;
+    
+    }
+}
+
+
+    .image-container {
+          position: relative;
+          height: 300px;
+    }
+
+    .image-container img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+    }
+
+    .mobile-search {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.myNewSwiper .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .myNewSwiper  .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .myNewSwiper   .swiper-slide {
+      width: 65%;
+    }
+
+
+</style>
+</head>
+<body class="bg-[#F7F6F2]">
+  <header class="mb-0">
+    <div class="bg-white w-full  px-4">
+      <div class="cursor-default mx-auto flex items-center justify-between h-full flex items-center text-black font-avenir text-xs py-3">
+
+          <div class="hidden xl:block">
+           <img src="./img/Logo.svg" alt="">
+          </div>
+          <div class="flex items-center gap-2 xl:hidden">
+            <button class=" " onclick="showMobileMenu()">
+              <div id="mobileMenuOpen" style="display: block">
+                <img src="./img/ssd.svg" alt="">
+              </div>
+              <div id="menuButtonX" style="display: none">
+                <img src="./img/Icons.svg" alt="">
+                </div>
+            </button>
+ 
+            <img src="./img/Frame 39988.svg" alt="">
+           </div>
+          <div class="text-[#C2C2C2] text-center space-x-4 hidden xl:block font-helvetica-neue font-normal"  style="    text-transform: uppercase;font-feature-settings: 'case' on">
+              <a href="" class="active:text-black font-NEOMETRA">მთავარი</a>
+             
+              <a href="" class="active:text-black">სიახლეები</a>
+            
+              <a href="" class="active:text-black">საერთაშორისო სიახლეები</a>
+            
+              <a href="" class="active:text-black">ბიზნესი</a>
+             
+              <a href="" class="active:text-black">ანალიტიკა</a>
+            
+              <a href="" class="active:text-black">ტრენდები</a>
+          </div>
+          <div class="text-right flex items-center space-x-4 justify-end">
+              <a  href="/en/" class="text-sm text-[#202020] rounded-[4px] border border-[#FAFAFA] p-[8px]">EN</a>
+              <div class="relative hidden xl:block">
+                <input type="text"  class="input block w-full  py-[10px] pl-2 rounded-[4px] border border-[#FAFAFA]  border text-gray-950 appearance-none" placeholder="ძებნა...">
+                <button class="absolute top-2 right-[10px]">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.0625 15.625C12.6869 15.625 15.625 12.6869 15.625 9.0625C15.625 5.43813 12.6869 2.5 9.0625 2.5C5.43813 2.5 2.5 5.43813 2.5 9.0625C2.5 12.6869 5.43813 15.625 9.0625 15.625Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.7031 13.7032L17.5 17.5001" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+              </div>
+              <button class="bg-[#fff] w-8 h-8 flex space-x-2 items-center justify-center rounded-md mr-3 xl:hidden"
+              onclick="showMobileSearch()">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M14.7638 15.8607C12.022 18.0567 8.00872 17.8838 5.46714 15.3422C2.74012 12.6152 2.74012 8.19385 5.46714 5.46684C8.19416 2.73981 12.6155 2.73982 15.3425 5.46684C17.8841 8.00841 18.057 12.0217 15.861 14.7635L21.1946 20.097C21.4976 20.4001 21.4976 20.8913 21.1946 21.1943C20.8916 21.4973 20.4004 21.4973 20.0974 21.1943L14.7638 15.8607ZM6.56441 14.245C4.44339 12.124 4.44339 8.68512 6.56441 6.5641C8.68542 4.44309 12.1243 4.44309 14.2453 6.5641C16.3647 8.68356 16.3663 12.1189 14.2499 14.2403C14.2484 14.2418 14.2468 14.2434 14.2453 14.245C14.2437 14.2465 14.2422 14.2481 14.2406 14.2496C12.1192 16.366 8.68387 16.3644 6.56441 14.245Z"
+                      fill="#1F1F1F" />
+              </svg>
+          </button>
+
+              </div>
+      </div>
+
+</header>
+<div class="mobile-search" style="display: none;" id="mobileSearch">
+  <div class="flex flex-col items-center h-full">
+      <div class="flex flex-row items-center bg-white px-2 py-3 w-full">
+        <button>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7638 15.8607C12.022 18.0567 8.00872 17.8838 5.46714 15.3422C2.74012 12.6152 2.74012 8.19385 5.46714 5.46684C8.19416 2.73981 12.6155 2.73982 15.3425 5.46684C17.8841 8.00841 18.057 12.0217 15.861 14.7635L21.1946 20.097C21.4976 20.4001 21.4976 20.8913 21.1946 21.1943C20.8916 21.4973 20.4004 21.4973 20.0974 21.1943L14.7638 15.8607ZM6.56441 14.245C4.44339 12.124 4.44339 8.68512 6.56441 6.5641C8.68542 4.44309 12.1243 4.44309 14.2453 6.5641C16.3647 8.68356 16.3663 12.1189 14.2499 14.2403C14.2484 14.2418 14.2468 14.2434 14.2453 14.245C14.2437 14.2465 14.2422 14.2481 14.2406 14.2496C12.1192 16.366 8.68387 16.3644 6.56441 14.245Z" fill="#1F1F1F"></path>
+        </svg>
+        </button>
+        
+          <input type="text" class="w-full bg-transparent outline-none text-black p-2 focus:outline-none" placeholder="ძებნა" id="news-search-mobile-input">
+          <div class="flex items-center">
+              <button class="w-10	h-10 bg-white flex items-center justify-center text-black rounded-lg" onclick="showMobileSearch()">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="5.78906" y="4" width="20.0961" height="1.67044" rx="0.835222" transform="rotate(45 5.78906 4)" fill="#1F1F1F"></rect>
+                      <rect x="4" y="18.3375" width="20.0961" height="1.66961" rx="0.834803" transform="rotate(-45 4 18.3375)" fill="#1F1F1F"></rect>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="mobile-menu bg-white hidden"  id="mobileMenu">
+  <div class="flex flex-col items-center justify-between h-[100vh] py-6">
+    <div class="flex flex-col gap-3 items-center overflow-y-scroll scroll-bar text-[#C2C2C2] font-helvetica-neue font-normal w-full px-3.5"
+   style="    text-transform: uppercase;font-feature-settings: 'case' on">
+
+        <a href="" class="active:text-black border border-[#F0F0F0] w-full text-center py-4">მთავარი</a>
+                    
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">სიახლეები</a>
+
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">საერთაშორისო სიახლეები</a>
+
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">ბიზნესი</a>
+
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">ანალიტიკა</a>
+
+        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">ტრენდები</a>
+      </div>
+  </div>
+</div>
+
+<section class="  px-4">
+    <div class="grid grid-cols-1 xl:grid-cols-8">
+        <div  class="xl:col-span-2"></div>
+        <div class="xl:col-span-4">  
+            <div class="flex mt-12 items-center gap-2">
+            <button class="bg-white text-sm text-[#474747] px-2 py-1.5 font-normal">ურბანული განვითარება</button>
+            <p class=" text-sm font-normal">13 ივნისი, 23:03</p>
+          </div>
+          <div class="flex mt-12 mb-9">
+    <h1 class="text-[#333333]  font-helvetica-neue font-bold text-[28px] xl:text-[40px]"
+    style="    text-transform: uppercase;font-feature-settings: 'case' on">ურბანული დაგეგმარება: საცხოვრებელი <br> ქალაქების შექმნა</h1>
+          </div>
+           
+        </div>
+        <div  class="xl:col-span-2"></div>
+    </div>
+
+      <div>
+        <img src="./img/Picture.png" alt="Slide 1" class="brightness-75 mx-auto h-full object-cover">
+      </div>
+      <div class="grid grid-cols-1 xl:grid-cols-8 pt-10 pb-12">
+        <div class="xl:col-span-2">
+            <p class="text-[#474747] font-helvetica-neue">ავტორი</p>
+            <p class="text-[#474747]  font-helvetica-neue font-bold"style="text-transform: uppercase;font-feature-settings: 'case' on">ნიკოლოზ ბარათაშვილი</p>
+        </div>
+        <div class="xl:col-span-4  order-2 xl:order-1">
+            <p class="text-[#474747] text-[16px]  font-helvetica-neue font-normal text-wrap">
+                სუმატრის ვეფხვის სავალალო მდგომარეობის შესახებ მთელ მსოფლიოშია ცნობილი. კრიტიკულად საფრთხის ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა. ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა.
+                <br>
+                <br>    
+                მსგავსი: როდის და რატომ გადაშენდა დედამიწის ისტორიაში ყველაზე დიდი მაიმუნი — #1tvმეცნიერება
+ყოველ შემთხვევაში, ასე გვეგონა.
+                <br>
+                <br> 
+                უკვე ათწლეულებია, მეცნიერებს საერთოდ აღარ უნახავთ სუმატრის ვეფხვის ნათესავი, იავის ვეფხვი, არც მისი რაიმე ნიშანი. ეს ვეფხვი ერთ დროს ბინადრობდა ინდონეზიის ყველაზე ხალხმრავალ კუნძულზე. ულმობელი ნადირობისა და ჰაბიტატის დაკარგვის შემდეგ, 2008 წელს, იავის ვეფხვი გადაშენებულად გამოცხადდა.
+                <br>
+                
+თუმცა, ამბავი აქ არ სრულდება. 2019 წელს, გადაშენებულად გამოცხადებიდან ათი წლის შემდეგ, როცა მეცნიერებს იმედი გადაეწურათ, ვეფხვის ბეწვი იპოვეს. <br>
+18 აგვისტოს, ადგილობრივმა კონსერვაციონისტმა რიპი იანურ ფაიარმა განაცხადა, რომ დასავლეთ იავის ერთ-ერთი სოფლის გარეთ ვეფხვი დაინახა. ამის შესახებ მან მკვლევარ კალიფ რაკსესევუს აცნობა, რომელიც აღნიშნულ სოფელში მთავრობის წარმომადგენელთან ერთად გაემართა.
+<br>
+წყვილმა მიაგნო ნაფეხურებსა და ბრჭყალებით ნაკაწრებს, რომლებიც შეიძლება ვეფხვის მიერ ყოფილიყო დატოვებული. ღობეზე, რომელიც სოფლის გზას პლანტაციისგან ყოფს, ერთ ბეწვსაც მიაგნეს.
+მსგავსი: ბრმა, უიშვიათესი ოქროსფერი თხუნელა 86 წლის შემდეგ პირველად დააფიქსირეს — <br> #1tvმეცნიერება <br>
+2022 წლის მარტში, აღმოჩენა გენეტიკური ანალიზისთვის გადაუგზავნეს ინდონეზიის ბიოლოგიური კვლევების ცენტრს. 
+<br>
+                <br> 
+
+
+შედეგები შეადარეს სუმატრის ვეფხვს და ასევე იავის ვეფხვის 1930 სამუზეუმო ეგზემპლარს. ეს ორი ვეფხვი ერთ ქვესახეობად მიიჩნევა (Panthera tigris sondaica). <br>
+ბეწვი სუმატრის ვეფხვის გენეტიკას 97 პროცენტით დაემთხვა. გენეტიკური მანძილი მასა და მუზეუმში დაცულ იავის ვეფხვის ნიმუშს შორის 0,3 პროცენტი იყო.
+<br><br>
+„ყოვლისმომცველი mtDNA ანალიზების საფუძველზე ვასკვნით, რომ სამხრეთ სუკაბუმში აღმოჩენილი ბეწვის ნიმუში იავის ვეფხვს ეკუთვნის და ის იმავე ჯგუფში თავსდება, რომელსაც 1930 წელს დაჭერილი იავის ვეფხვის სამუზეუმო ნიმუში. კიდევ არსებობს თუ არა ველურ ბუნებაში იავის ვეფხვი, შემდეგი გენეტიკური ანალიზებით უნდა დადასტურდეს“, — წერენ მკვლევრები.
+<br>
+თუ ამ ვეფხვის პოპულაცია მართლაც არსებობს, არცერთ ვარიანტში ის დიდი არ იქნება და საჭირო იქნება დაცვა.
+<br>
+
+მსგავსი: სოლომონის კუნძულებზე დააფიქსირეს გიგანტური მღრღნელი, რომლის არსებობაც მხოლოდ ლეგენდებით ვიცოდით — #1tvმეცნიერება
+<br>
+<br>
+
+
+საუკუნეების წინ, იავის ვეფხვი ფართოდ იყო გავრცელებული იავის ტყეებსა და ბამბუკის ტევრებში. თუმცა, დღეს იავა მსოფლიოში ყველაზე მეტად დასახლებული კუნძულია, სადაც თავს იყრის ინდონეზიის მოსახლეობის ნახევარზე მეტი. ადამიანთა საჭიროებების გამო, ამ ვეფხვის გავრცელების არეალი ძირითადად განადგურდა, ძირითადად სოფლის მეურნეობისა და მშენებლობებისათვის
+            </p>
+        </div>
+        <div class="pt-4 pb-8 xl:p-0 xl:justify-self-end order-1 xl:order-2 xl:col-span-2 flex gap-2 xl:justify-center items-start">
+            <a href="" class="p-2.5 bg-white text-sm flex items-center text-[#333333]  font-helvetica-neue gap-2">ბმული <img src="./img/Link.svg" alt=""></a>
+            <a href="" class="p-3 bg-white flex items-center"><img src="./img/uim_facebook-f.svg" alt=""></a>
+            <a href="" class="p-3 bg-white flex items-center"><img src="./img/icon-instagram.svg" alt=""></a>
+        </div>
+
+      </div>
+      <img src="./img/Picture in between.png" alt="" class="flex items-center justify-center mx-auto">
+      <div class="grid grid-cols-1 xl:grid-cols-8 gap-4 py-12">
+        <div  class="xl:col-span-2">
+        </div>
+        <div class="xl:col-span-4 flex justify-center">
+          <p class="text-[#474747] text-[16px] font-helvetica-neue font-normal text-wrap overflow-hidden">
+        უმატრის ვეფხვის სავალალო მდგომარეობის შესახებ მთელ მსოფლიოშია ცნობილი. კრიტიკულად საფრთხის ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა. ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა.
+        <br>
+        <br>    
+        მსგავსი: როდის და რატომ გადაშენდა დედამიწის ისტორიაში ყველაზე დიდი მაიმუნი — #1tvმეცნიერება
+ყოველ შემთხვევაში, ასე გვეგონა.
+        <br>
+        <br> 
+        უკვე ათწლეულებია, მეცნიერებს საერთოდ აღარ უნახავთ სუმატრის ვეფხვის ნათესავი, იავის ვეფხვი, არც მისი რაიმე ნიშანი. ეს ვეფხვი ერთ დროს ბინადრობდა ინდონეზიის ყველაზე ხალხმრავალ კუნძულზე. ულმობელი ნადირობისა და ჰაბიტატის დაკარგვის შემდეგ, 2008 წელს, იავის ვეფხვი გადაშენებულად გამოცხადდა.
+        <br>
+        
+თუმცა, ამბავი აქ არ სრულდება. 2019 წელს, გადაშენებულად გამოცხადებიდან ათი წლის შემდეგ, როცა მეცნიერებს იმედი გადაეწურათ, ვეფხვის ბეწვი იპოვეს. <br>
+18 აგვისტოს, ადგილობრივმა კონსერვაციონისტმა რიპი იანურ ფაიარმა განაცხადა, რომ დასავლეთ იავის ერთ-ერთი სოფლის გარეთ ვეფხვი დაინახა. ამის შესახებ მან მკვლევარ კალიფ რაკსესევუს აცნობა, რომელიც აღნიშნულ სოფელში მთავრობის წარმომადგენელთან ერთად გაემართა.
+<br>
+წყვილმა მიაგნო ნაფეხურებსა და ბრჭყალებით ნაკაწრებს, რომლებიც შეიძლება ვეფხვის მიერ ყოფილიყო დატოვებული. ღობეზე, რომელიც სოფლის გზას პლანტაციისგან ყოფს, ერთ ბეწვსაც მიაგნეს.
+მსგავსი: ბრმა, უიშვიათესი ოქროსფერი თხუნელა 86 წლის შემდეგ პირველად დააფიქსირეს — <br> #1tvმეცნიერება <br>
+2022 წლის მარტში, აღმოჩენა გენეტიკური ანალიზისთვის გადაუგზავნეს ინდონეზიის ბიოლოგიური კვლევების ცენტრს. 
+<br>
+        <br> 
+
+
+შედეგები შეადარეს სუმატრის ვეფხვს და ასევე იავის ვეფხვის 1930 სამუზეუმო ეგზემპლარს. ეს ორი ვეფხვი ერთ ქვესახეობად მიიჩნევა (Panthera tigris sondaica). <br>
+ბეწვი სუმატრის ვეფხვის გენეტიკას 97 პროცენტით დაემთხვა. გენეტიკური მანძილი მასა და მუზეუმში დაცულ იავის ვეფხვის ნიმუშს შორის 0,3 პროცენტი იყო.
+<br><br>
+„ყოვლისმომცველი mtDNA ანალიზების საფუძველზე ვასკვნით, რომ სამხრეთ სუკაბუმში აღმოჩენილი ბეწვის ნიმუში იავის ვეფხვს ეკუთვნის და ის იმავე ჯგუფში თავსდება, რომელსაც 1930 წელს დაჭერილი იავის ვეფხვის სამუზეუმო ნიმუში. კიდევ არსებობს თუ არა ველურ ბუნებაში იავის ვეფხვი, შემდეგი გენეტიკური ანალიზებით უნდა დადასტურდეს“, — წერენ მკვლევრები.
+<br>
+თუ ამ ვეფხვის პოპულაცია მართლაც არსებობს, არცერთ ვარიანტში ის დიდი არ იქნება და საჭირო იქნება დაცვა.
+<br>
+
+მსგავსი: სოლომონის კუნძულებზე დააფიქსირეს გიგანტური მღრღნელი, რომლის არსებობაც მხოლოდ ლეგენდებით ვიცოდით — #1tvმეცნიერება
+<br>
+<br>
+
+
+საუკუნეების წინ, იავის ვეფხვი ფართოდ იყო გავრცელებული იავის ტყეებსა და ბამბუკის ტევრებში. თუმცა, დღეს იავა მსოფლიოში ყველაზე მეტად დასახლებული კუნძულია, სადაც თავს იყრის ინდონეზიის მოსახლეობის ნახევარზე მეტი. ადამიანთა საჭიროებების გამო, ამ ვეფხვის გავრცელების არეალი ძირითადად განადგურდა, ძირითადად სოფლის მეურნეობისა და მშენებლობებისათვის
+    </p>
+    </div>
+    <div  class="xl:col-span-2"></div>
+      </div>
+</section>
+
+<footer class="bg-white px-4 py-6 mt-96 flex flex-col gap-28 md:gap-40">
+  <div class="flex flex-col gap-28 md:gap-0 items-start md:flex-row md:items-center justify-between">
+    <img src="./img/Logo.svg" alt="">
+
+   <div>
+    <p class="font-light text-[#202020]">გამოგვყევით
+    </p>
+    <div class="flex items-center gap-2">
+      <a href="" class="p-3"><img src="./img/uim_facebook-f.svg" alt=""></a>
+      <a href="" class="p-3"><img src="./img/icon-instagram.svg" alt=""></a>
+    </div>
+   </div>
+   </div>
+   <div>
+    <p class="font-normal text-[#5C5C5C]">2024 LCD all rights reserved</p>
+   </div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+<script>
+ 
+    function showMobileMenu() {
+        var mobileMenu = document.getElementById('mobileMenu');
+        var menuButtonX = document.getElementById('menuButtonX');
+        var mobileMenuOpen = document.getElementById('mobileMenuOpen');
+        var body = document.body;
+
+        if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+            mobileMenu.style.display = 'block';
+            menuButtonX.style.display = 'block';
+            mobileMenuOpen.style.display = 'none';
+            body.style.overflowY = "hidden";
+        } else {
+            mobileMenu.style.display = 'none';
+            menuButtonX.style.display = 'none';
+            mobileMenuOpen.style.display = 'block';
+            body.style.overflowY = "auto";
+        }
+
+        if (window.innerWidth < 1280) {
+      mobileMenu.style.display = isOpen ? 'block' : 'none';
+    } else {
+      mobileMenu.style.display = 'none';
+    }
+    }
+
+    function showMobileSearch() {
+        var mobileSearch = document.getElementById('mobileSearch');
+        var body = document.body;
+
+        if (mobileSearch.style.display === 'none' || mobileSearch.style.display === '') {
+            mobileSearch.style.display = 'block';
+            body.style.overflowY = "hidden";
+            document.getElementById("searchInput").focus();
+        } else {
+            mobileSearch.style.display = 'none';
+            body.style.overflowY = "auto";
+        }
+    }
+   
+
+    function handleResize() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileSearch = document.getElementById('mobileSearch');
+
+    if (window.innerWidth >= 1280) {
+      mobileMenu.style.display = 'none';
+      mobileSearch.style.display = 'none';
+    }
+  }
+
+  window.addEventListener('resize', handleResize);
+  handleResize();
+</script>
+</html>
