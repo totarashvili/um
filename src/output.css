@@ -746,6 +746,10 @@ video {
   grid-column: span 3 / span 3;
 }
 
+.float-left {
+  float: left;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -942,8 +946,8 @@ video {
   gap: 0.5rem;
 }
 
-.gap-28 {
-  gap: 7rem;
+.gap-20 {
+  gap: 5rem;
 }
 
 .gap-3 {
@@ -978,16 +982,16 @@ video {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .overflow-y-scroll {
   overflow-y: scroll;
 }
 
 .text-wrap {
   text-wrap: wrap;
+}
+
+.break-words {
+  overflow-wrap: break-word;
 }
 
 .rounded-\[4px\] {
@@ -1071,6 +1075,10 @@ video {
 
 .p-\[8px\] {
   padding: 8px;
+}
+
+.p-52 {
+  padding: 13rem;
 }
 
 .px-16 {
@@ -1178,12 +1186,20 @@ video {
   padding-left: 0.5rem;
 }
 
+.pl-\[3px\] {
+  padding-left: 3px;
+}
+
 .pr-\[150px\] {
   padding-right: 150px;
 }
 
 .pr-\[50px\] {
   padding-right: 50px;
+}
+
+.pr-\[8px\] {
+  padding-right: 8px;
 }
 
 .pt-10 {
@@ -1196,6 +1212,10 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-\[4px\] {
+  padding-top: 4px;
 }
 
 .text-center {
@@ -1240,6 +1260,10 @@ video {
   font-size: 28px;
 }
 
+.text-\[75px\] {
+  font-size: 75px;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1272,6 +1296,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.leading-\[60px\] {
+  line-height: 60px;
 }
 
 .leading-none {
@@ -1452,6 +1480,14 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:order-1 {
+    order: 1;
+  }
+
+  .md\:order-2 {
+    order: 2;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1518,6 +1554,10 @@ video {
 
   .xl\:h-full {
     height: 100%;
+  }
+
+  .xl\:w-full {
+    width: 100%;
   }
 
   .xl\:grid-cols-2 {

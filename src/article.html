@@ -150,7 +150,15 @@
     .myNewSwiper   .swiper-slide {
       width: 65%;
     }
-
+    .firstcharacter {
+  color: #3D3D3D;
+  float: left;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
 
 </style>
 </head>
@@ -279,9 +287,11 @@
             <p class="text-[#474747] font-helvetica-neue font-medium">ავტორი</p>
             <p class="text-[#474747]  font-helvetica-neue font-bold"style="text-transform: uppercase;font-feature-settings: 'case' on">ნიკოლოზ ბარათაშვილი</p>
         </div>
-        <div class="xl:col-span-4  order-2 xl:order-1">
-            <p class="text-[#474747] text-[16px]  font-helvetica-neue font-normal text-wrap">
-                სუმატრის ვეფხვის სავალალო მდგომარეობის შესახებ მთელ მსოფლიოშია ცნობილი. კრიტიკულად საფრთხის ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა. ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა.
+        <div class="xl:col-span-4  order-2 xl:order-1 ">
+            <p class="text-[#474747] text-[16px]  font-helvetica-neue font-normal text-wrap break-words" id="resizable-text">
+              <span class="text-[#3D3D3D] float-left text-[75px] leading-[60px] pt-[4px] pr-[8px] pl-[3px]">
+                ს
+              </span>უმატრის ვეფხვის სავალალო მდგომარეობის შესახებ მთელ მსოფლიოშია ცნობილი. კრიტიკულად საფრთხის ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა. ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა.
                 <br>
                 <br>    
                 მსგავსი: როდის და რატომ გადაშენდა დედამიწის ისტორიაში ყველაზე დიდი მაიმუნი — #1tvმეცნიერება
@@ -319,8 +329,15 @@
         </div>
         <div class="pt-4 pb-8 xl:p-0 xl:justify-self-end order-1 xl:order-2 xl:col-span-2 flex gap-2 xl:justify-center items-start">
             <a href="" class="p-2.5 bg-white text-sm flex items-center text-[#2E2E2E]  font-helvetica-neue gap-2 font-normal">ბმული <img src="./img/Link.svg" alt=""></a>
-            <a href="" class="p-3 bg-white flex items-center"><img src="./img/uim_facebook-f.svg" alt=""></a>
-            <a href="" class="p-3 bg-white flex items-center"><img src="./img/icon-instagram.svg" alt=""></a>
+            <a href="" class="p-3 bg-white flex items-center"><img src="./img/bxl_facebook.svg" alt=""></a>
+            <a href="" class="p-3 bg-white flex items-center"><img src="./img/asasasa.svg" alt=""></a>
+            <a href="" class="p-3 bg-white flex items-center"><img src="./img/ri_instagram-line.svg" alt=""></a>
+            <div class="flex items-center justify-centr bg-white p-2.5 gap-2">
+              <button class="resize-button" onclick="changeFontSize('decrease')"><img src="./img/minus.svg" alt=""></button>
+              <p class="text-[#2E2E2E] font-helvetica-neue font-medium text-sm">Aa</p>
+              <button class="resize-button" onclick="changeFontSize('increase')"><img src="./img/plus.svg" alt=""></button>
+              
+            </div>
         </div>
 
       </div>
@@ -329,8 +346,8 @@
         <div  class="xl:col-span-2">
         </div>
         <div class="xl:col-span-4 flex justify-center">
-          <p class="text-[#474747] text-[16px] font-helvetica-neue font-normal text-wrap overflow-hidden">
-        უმატრის ვეფხვის სავალალო მდგომარეობის შესახებ მთელ მსოფლიოშია ცნობილი. კრიტიკულად საფრთხის ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა. ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა.
+          <p class="text-[#474747] text-[16px]  font-helvetica-neue font-normal text-wrap break-words" id="resizable-text-two">
+        სუმატრის ვეფხვის სავალალო მდგომარეობის შესახებ მთელ მსოფლიოშია ცნობილი. კრიტიკულად საფრთხის ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა. ქვეშ მყოფი ეს ვეფხვი ინდონეზიაში, ზონდისკუნძულებზე შემორჩენილი ვეფხვის ერთადერთი სახეობაა.
         <br>
         <br>    
         მსგავსი: როდის და რატომ გადაშენდა დედამიწის ისტორიაში ყველაზე დიდი მაიმუნი — #1tvმეცნიერება
@@ -408,21 +425,23 @@
     </a>
   </div>
 </section>
-<footer class="bg-white px-4 py-6 flex flex-col gap-28 md:gap-40">
-  <div class="flex flex-col gap-28 md:gap-0 items-start md:flex-row md:items-center justify-between">
+<footer class="bg-white gap-2 px-4 py-6 flex flex-col  md:gap-40">
+  <div class="flex flex-col gap-20  md:gap-0 items-start md:flex-row md:items-center justify-between">
     <img src="./img/Logo.svg" alt="">
 
    <div>
     <p class="font-light text-[#202020] font-helvetica-neue font-medium">გამოგვყევით
     </p>
-    <div class="flex items-center gap-2">
-      <a href="" class="p-3"><img src="./img/uim_facebook-f.svg" alt=""></a>
-      <a href="" class="p-3"><img src="./img/icon-instagram.svg" alt=""></a>
+
+   </div>
+   </div>
+   <div  class="flex flex-col gap-20 md:gap-0 items-start md:flex-row md:items-center justify-between">
+    <p class="font-normal text-[#5C5C5C] order-2 md:order-1">2024 LCD all rights reserved</p>
+    <div class="flex items-center gap-2 order-1 md:order-2">
+      <a href=""  class="p-3 border border-[#F0F0F0]"><img src="./img/uim_facebook-f.svg" alt=""></a>
+      <a href=""  class="p-3 border border-[#F0F0F0]"><img src="./img/icon-instagram.svg" alt=""></a>
+      <a href=""  class="p-3 border border-[#F0F0F0]"><img src="./img/mdi_youtube.svg" alt=""></a>
     </div>
-   </div>
-   </div>
-   <div>
-    <p class="font-normal text-[#5C5C5C]">2024 LCD all rights reserved</p>
    </div>
 </footer>
 </body>
@@ -481,5 +500,23 @@
 
   window.addEventListener('resize', handleResize);
   handleResize();
+
+  const defaultFontSize = 16;
+    let currentFontSize = defaultFontSize;
+
+    function changeFontSize(action) {
+      const textElement = document.getElementById('resizable-text');
+      const textElementTwo = document.getElementById('resizable-text-two');
+      
+      if (action === 'increase') {
+        currentFontSize += 2; 
+      } else if (action === 'decrease') {
+        currentFontSize -= 2; 
+        if (currentFontSize < 10) currentFontSize = 10;
+      }
+
+      textElement.style.fontSize = currentFontSize + 'px';
+      textElementTwo.style.fontSize = currentFontSize + 'px';
+    }
 </script>
 </html>
