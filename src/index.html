@@ -170,13 +170,36 @@
         border-radius: 64px;
         transition: width .2s ease;
     }
+    input[type="date"] {
+    position: relative;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+}
 
+.textbox-n {
+            box-sizing: border-box;
+            width: 100%;
+            height: 40px; 
+        }
+
+        input[type="date"]{
+width: 200px;
+outline: none;
+}
 </style>
 </head>
 <body class="bg-[#F7F6F2]">
   <header class="mb-0">
     <div class="bg-white w-full  px-4">
-      <div class="cursor-default mx-auto flex items-center justify-between h-full flex items-center text-black font-avenir text-xs py-3">
+      <div class="cursor-default mx-auto flex items-center justify-between h-full flex items-center text-black font-avenir text-xs py-4">
 
           <div class="hidden xl:block">
            <img src="./img/Logo.svg" alt="">
@@ -193,23 +216,24 @@
  
             <img src="./img/Frame 39988.svg" alt="">
            </div>
-          <div class="text-[#C2C2C2] text-center space-x-4 hidden xl:block font-helvetica-neue font-normal"  style="    text-transform: uppercase;font-feature-settings: 'case' on">
-              <a href="" class="active:text-black font-NEOMETRA">მთავარი</a>
+          <div class="text-[#707070] text-center space-x-4 hidden xl:block font-helvetica-neue font-normal "  style="    text-transform: uppercase;font-feature-settings: 'case' on">
+              <a href="" class="active: text-[#171717] font-helvetica-neue font-medium text-sm">მთავარი</a>
              
-              <a href="" class="active:text-black">სიახლეები</a>
+              <a href="" class="active:text-[#171717] font-helvetica-neue font-normal text-sm active:font-medium">სიახლეები</a>
             
-              <a href="" class="active:text-black">საერთაშორისო სიახლეები</a>
+              <a href="" class="active:text-[#171717] font-helvetica-neue font-normal text-sm active:font-medium">საერთაშორისო სიახლეები</a>
+              <a href="" class="active:text-[#171717] font-helvetica-neue font-normal text-sm active:font-medium">თბილისი</a>
             
-              <a href="" class="active:text-black">ბიზნესი</a>
+              <a href="" class="active:text-[#171717] font-helvetica-neue font-normal text-sm active:font-medium">ბიზნესი</a>
              
-              <a href="" class="active:text-black">ანალიტიკა</a>
+              <a href="" class="active:text-[#171717] font-helvetica-neue font-normal text-sm active:font-medium">ანალიტიკა</a>
             
-              <a href="" class="active:text-black">ტრენდები</a>
+          
           </div>
           <div class="text-right flex items-center space-x-4 justify-end">
               <a  href="/en/" class="text-sm text-[#202020] rounded-[4px] border border-[#FAFAFA] p-[8px]">EN</a>
               <div class="relative hidden xl:block">
-                <input type="text"  class="input block w-full  py-[10px] pl-2 rounded-[4px] border border-[#FAFAFA]  border text-gray-950 appearance-none" placeholder="ძებნა...">
+                <input type="text"  class="input block w-full outline-none py-[10px] pl-2 rounded-[4px] border border-[#FAFAFA]  border text-gray-950 appearance-none text-sm text-[#707070] placeholder:text-[#707070]" placeholder="ძებნა">
                 <button class="absolute top-2 right-[10px]">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.0625 15.625C12.6869 15.625 15.625 12.6869 15.625 9.0625C15.625 5.43813 12.6869 2.5 9.0625 2.5C5.43813 2.5 2.5 5.43813 2.5 9.0625C2.5 12.6869 5.43813 15.625 9.0625 15.625Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -254,20 +278,20 @@
 </div>
 <div class="mobile-menu bg-white hidden"  id="mobileMenu">
   <div class="flex flex-col items-center justify-between h-[100vh] py-6">
-    <div class="flex flex-col gap-3 items-center overflow-y-scroll scroll-bar text-[#C2C2C2] font-helvetica-neue font-normal w-full px-3.5"
+    <div class="flex flex-col gap-3 items-center overflow-y-scroll scroll-bar text-[#707070] font-helvetica-neue font-normal w-full px-3.5"
    style="    text-transform: uppercase;font-feature-settings: 'case' on">
 
-        <a href="" class="active:text-black border border-[#F0F0F0] w-full text-center py-4">მთავარი</a>
+        <a href="" class="active: text-[#171717] font-helvetica-neue font-medium text-sm border border-[#F0F0F0] w-full text-center py-4">მთავარი</a>
                     
-        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">სიახლეები</a>
+        <a href=""  class="active:text-[#171717] font-helvetica-neue font-medium text-sm border border-[#F0F0F0] w-full text-center py-4">სიახლეები</a>
 
-        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">საერთაშორისო სიახლეები</a>
+        <a href=""  class="active:text-[#171717] font-helvetica-neue font-medium text-sm border border-[#F0F0F0] w-full text-center py-4">საერთაშორისო სიახლეები</a>
+        
+        <a href=""  class="active:text-[#171717] font-helvetica-neue font-medium text-sm border border-[#F0F0F0] w-full text-center py-4">თბილისი</a>
 
-        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">ბიზნესი</a>
+        <a href=""  class="active:text-[#171717] font-helvetica-neue font-medium text-sm border border-[#F0F0F0] w-full text-center py-4">ბიზნესი</a>
 
-        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">ანალიტიკა</a>
-
-        <a href=""  class="active:text-black border border-[#F0F0F0] w-full text-center py-4">ტრენდები</a>
+        <a href=""  class="active:text-[#171717] font-helvetica-neue font-medium text-sm border border-[#F0F0F0] w-full text-center py-4">ანალიტიკა</a>
       </div>
   </div>
 </div>
@@ -277,11 +301,11 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="slide-content">
-          <img src="./img/Frame 39971.png" alt="Slide 1" class="brightness-75 h-[100vh] xl:h-full">
+          <img src="./img/Frame 39971.png" alt="Slide 1" class="brightness-50 h-[100vh] xl:h-full">
           <div class="slide-text">
             <div class="flex items-center gap-2">
-              <button class="bg-white text-xs xl:text-sm text-[#474747] px-2 py-1.5 font-normal">ურბანული განვითარება</button>
-              <p class=" text-xs xl:text-sm font-normal">13 ივნისი, 23:03</p>
+              <button class="bg-white text-xs xl:text-[13px] text-[#3D3D3D] px-2 py-1.5 font-medium">ურბანული განვითარება</button>
+              <p class=" text-xs xl:text-[13px] font-medium">13 ივნისი, 23:03</p>
             </div>
             <p class="text-3xl text-center pt-4 font-Umgeo font-bold" >urbanuli <br> ganviTrebis <br>
                                                                         etapebi da maTi <br> miRwevis <br>
@@ -292,7 +316,7 @@
       </div>
       <div class="swiper-slide">
         <div class="slide-content">
-          <img src="./img/Frame 39971.png" alt="Slide 2"  class="brightness-75 h-[100vh] xl:h-full">
+          <img src="./img/Frame 39971.png" alt="Slide 2"  class="brightness-50 h-[100vh] xl:h-full">
           <div class="slide-text">
             <div class="flex items-center gap-2">
               <button class="bg-white text-xs xl:text-sm text-[#474747] px-2 py-1.5 font-normal">ურბანული განვითარება</button>
@@ -325,39 +349,39 @@
   <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
      <a class="grid grid-cols-1 xl:grid-cols-2 gap-4 bg-white p-[12px] border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
       <img src="./img/Frame 1.png" alt="" class="max-md:w-full h-full object-cover">
-      <div>
-        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#474747] font-bold">ურბანული განვითარება</button>
-        <h2 class="mt-6 mb-16 text-md text-[#474747] font-helvetica-neue font-normal"  style="text-transform: uppercase;
+      <div class="flex flex-col items-start justify-between">
+        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#3D3D3D] font-bold">ურბანული განვითარება</button>
+        <h2 class="mt-6 mb-16 text-md text-[#3D3D3D] font-helvetica-neue font-normal"  style="text-transform: uppercase;
         font-feature-settings: 'case' on">ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
         </h2>
-        <p class="text-sm text-[#C2C2C2]">13 ივნისი, 23:03</p>
+        <p class="text-sm text-[#707070]">13 ივნისი, 23:03</p>
       </div>
     </a>
     <a class="grid grid-cols-1 xl:grid-cols-2 gap-4 bg-white p-[12px] border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
       <img src="./img/Frame 1.png" alt="" class="max-md:w-full h-full object-cover">
-      <div>
-        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#474747] font-bold">ინტერიერის დიზაინი</button>
-        <h2 class="mt-6 mb-16 text-md text-[#474747] font-helvetica-neue font-normal"  style="text-transform: uppercase;
+      <div class="flex flex-col items-start  justify-between">
+        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#3D3D3D] font-bold">ინტერიერის დიზაინი</button>
+        <h2 class="mt-6 mb-16 text-md text-[#3D3D3D] font-helvetica-neue font-normal"  style="text-transform: uppercase;
         font-feature-settings: 'case' on">ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
         </h2>
-        <p class="text-sm text-[#C2C2C2]">13 ივნისი, 23:03</p>
+        <p class="text-sm text-[#707070]">13 ივნისი, 23:03</p>
       </div>
     </a>
     <a class="grid grid-cols-1 xl:grid-cols-2 gap-4 bg-white p-[12px] border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
       <img src="./img/Frame 1.png" class="max-md:w-full h-full object-cover">
-      <div>
-        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#474747] font-bold">ურბანული განვითარება</button>
-        <h2 class="mt-6 mb-16 text-md text-[#474747] font-helvetica-neue font-normal"  style="text-transform: uppercase;
+      <div class="flex flex-col items-start justify-between">
+        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#3D3D3D] font-bold">ურბანული განვითარება</button>
+        <h2 class="mt-6 mb-16 text-md text-[#3D3D3D] font-helvetica-neue font-normal"  style="text-transform: uppercase;
         font-feature-settings: 'case' on">ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
         </h2>
-        <p class="text-sm text-[#C2C2C2]">13 ივნისი, 23:03</p>
+        <p class="text-sm text-[#707070]">13 ივნისი, 23:03</p>
       </div>
     </a>
   </div>
 </section>
 
 <section class="px-4  pb-16">
-  <div class="flex justify-between mb-6 ">
+  <div class="flex justify-between  mb-6 ">
     <h1  class="text-md font-bold text-[#333333] font-helvetica-neue" style="text-transform: uppercase;
     font-feature-settings: 'case' on">ყველაზე პოპულარული</h1>
     <a href=""  class="text-sm text-[#474747] font-medium ">სრულად ნახვა</a>
@@ -370,37 +394,37 @@
       <img src="/src/img/s.png" class="w-full h-full object-cover">
   </div>
     <div class="grid grid-cols-1 gap-4">
-       <a class=" bg-white p-3  border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
-        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#474747] font-bold">ურბანული განვითარება</button>
+       <a class=" bg-white p-3  border border-white hover:border-[#3D3D3D] transition-colors duration-500 ease-in-out cursor-pointer">
+        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#3D3D3D] font-bold">ურბანული განვითარება</button>
         <h2 class="mt-6 mb-16 font-helvetica-neue font-normal"  style="text-transform: uppercase;
         font-feature-settings: 'case' on">თანამედროვე სალონის სტილი: კომფორტის შერწყმა თანამედროვესთან
 
         </h2>
-        <p class="text-sm text-[#C2C2C2]">13 ივნისი, 23:03</p>
+        <p class="text-sm text-[#707070]">13 ივნისი, 23:03</p>
       </a>
-      <a class=" bg-white p-3  border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
-        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#474747] font-bold">ურბანული განვითარება</button>
+      <a class=" bg-white p-3  border border-white hover:border-[#3D3D3D] transition-colors duration-500 ease-in-out cursor-pointer">
+        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#3D3D3D] font-bold">ურბანული განვითარება</button>
         <h2 class="mt-6 mb-16 font-helvetica-neue font-normal"  style="text-transform: uppercase;
         font-feature-settings: 'case' on">თანამედროვე სალონის სტილი: კომფორტის შერწყმა თანამედროვესთან
 
         </h2>
-        <p class="text-sm text-[#C2C2C2]">13 ივნისი, 23:03</p>
+        <p class="text-sm text-[#707070]">13 ივნისი, 23:03</p>
       </a>
-      <a class=" bg-white p-3  border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
-        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#474747] font-bold">ურბანული განვითარება</button>
+      <a class=" bg-white p-3  border border-white hover:border-[#3D3D3D] transition-colors duration-500 ease-in-out cursor-pointer">
+        <button class="border border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#3D3D3D] font-bold">ურბანული განვითარება</button>
         <h2 class="mt-6 mb-16 font-helvetica-neue font-normal"  style="text-transform: uppercase;
         font-feature-settings: 'case' on">თანამედროვე სალონის სტილი: კომფორტის შერწყმა თანამედროვესთან
 
         </h2>
-        <p class="text-sm text-[#C2C2C2]">13 ივნისი, 23:03</p>
+        <p class="text-sm text-[#707070]">13 ივნისი, 23:03</p>
       </a>
-      <a class=" bg-white p-3  border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
-        <button class="border  border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#474747] font-bold">ურბანული განვითარება</button>
+      <a class=" bg-white p-3  border border-white hover:border-[#3D3D3D] transition-colors duration-500 ease-in-out cursor-pointer">
+        <button class="border  border-[#F0F0F0] px-[8px] py-[6px] text-sm text-[#3D3D3D] font-bold">ურბანული განვითარება</button>
         <h2 class="mt-6 mb-16 font-helvetica-neue font-normal"  style="text-transform: uppercase;
         font-feature-settings: 'case' on">თანამედროვე სალონის სტილი: კომფორტის შერწყმა თანამედროვესთან
 
         </h2>
-        <p class="text-sm text-[#C2C2C2]">13 ივნისი, 23:03</p>
+        <p class="text-sm text-[#707070]">13 ივნისი, 23:03</p>
       </a>
     </div>
   </div>
@@ -419,28 +443,28 @@
       <div class=" gap-4 bg-white p-8">
         <img src="./img/frame 24.png" alt="" >
         <div>
-          <h2 class="mt-4 mb-16  font-helvetica-neue font-normal"  style="text-transform: uppercase;
+          <h2 class="mt-4 mb-16  font-helvetica-neue font-normal text-[#3D3D3D]"  style="text-transform: uppercase;
           font-feature-settings: 'case' on">დაეუფლეთ ხელობას: საუკეთესო არქიტექტორები იზიარებენ თავიანთ სიბრძნეს
           </h2>
-          <p class="text-sm text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-sm text-[#707070]">13 ივნისი, 23:03</p>
         </div>
       </div>
       <div class=" gap-4 bg-white p-[12px] ">
-        <div>
-          <h2 class=" mb-16  font-helvetica-neue font-normal"  style="text-transform: uppercase;
+        <div> 
+          <h2 class=" mb-16  font-helvetica-neue font-normal text-[#3D3D3D]"  style="text-transform: uppercase;
           font-feature-settings: 'case' on">დაეუფლეთ ხელობას: საუკეთესო არქიტექტორები იზიარებენ თავიანთ სიბრძნეს
           </h2>
-          <p class="text-sm text-[#C2C2C2]"> 13 ივნისი, 23:03</p>
+          <p class="text-sm text-[#707070]"> 13 ივნისი, 23:03</p>
         </div>
         <img src="./img/Frame 25.png" alt="" class="mt-4 ">
       </div>
       <div class=" gap-4 bg-white p-[12px] ">
         <img src="./img/Frame 26.png" alt="" class="w-">
         <div>
-          <h2 class="mt-4 mb-16  font-helvetica-neue font-normal"  style="text-transform: uppercase;
+          <h2 class="mt-4 mb-16  font-helvetica-neue font-normal text-[#3D3D3D]"  style="text-transform: uppercase;
           font-feature-settings: 'case' on">დაეუფლეთ ხელობას: საუკეთესო არქიტექტორები იზიარებენ თავიანთ სიბრძნეს
           </h2>
-          <p class="text-sm text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-sm text-[#707070]">13 ივნისი, 23:03</p>
         </div>
       </div>
     </div>
@@ -456,44 +480,44 @@
         <img src="./img/rm.png" class="w-full h-full object-cover">
         <div class="col-span-2" style="    text-transform: uppercase;
         font-feature-settings: 'case' on">
-          <button class="text-xs border  border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold" >ურბანული განვითარება</button>
-          <h2 class="my-6 text-md font-helvetica-neue font-normal"  style="text-transform: uppercase;
+          <button class="text-xs border  border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold" >ურბანული განვითარება</button>
+          <h2 class="my-6 text-md font-helvetica-neue font-normal text-[#3D3D3D]"  style="text-transform: uppercase;
           font-feature-settings: 'case' on">ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
           </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
         </div>
       </a>
       <a class="grid  grid-cols-3 gap-4 bg-white p-[12px]  border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
         <img src="./img/rmstv.png" class="w-full h-full object-cover">
         <div class="col-span-2" style="    text-transform: uppercase;
         font-feature-settings: 'case' on">
-          <button class="text-xs border  border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold">ურბანული განვითარება</button>
-          <h2 class="my-6 text-md font-helvetica-neue font-normal"  style="text-transform: uppercase;
+          <button class="text-xs border  border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold">ურბანული განვითარება</button>
+          <h2 class="my-6 text-md font-helvetica-neue font-normal text-[#3D3D3D]"  style="text-transform: uppercase;
           font-feature-settings: 'case' on">ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
           </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
         </div>
       </a>
       <a class="grid  grid-cols-3 gap-4 bg-white p-[12px]  border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
         <img src="./img/rmst.png" class="w-full h-full object-cover">
         <div class="col-span-2" style="    text-transform: uppercase;
         font-feature-settings: 'case' on">
-          <button class="text-xs border  border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold">ურბანული განვითარება</button>
-          <h2 class="my-6 text-md font-helvetica-neue font-normal"  style="text-transform: uppercase;
+          <button class="text-xs border  border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold">ურბანული განვითარება</button>
+          <h2 class="my-6 text-md font-helvetica-neue font-normal text-[#3D3D3D]"  style="text-transform: uppercase;
           font-feature-settings: 'case' on">ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
           </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
         </div>
       </a>
       <a class="grid  grid-cols-3 gap-4 bg-white p-[12px]  border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
         <img src="./img/rms.png" class="w-full h-full object-cover">
         <div class="col-span-2" style="    text-transform: uppercase;
         font-feature-settings: 'case' on">
-          <button class="text-xs border  border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold">ურბანული განვითარება</button>
-          <h2 class="my-6 text-md font-helvetica-neue font-normal"  style="text-transform: uppercase;
+          <button class="text-xs border  border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold">ურბანული განვითარება</button>
+          <h2 class="my-6 text-md font-helvetica-neue font-normal text-[#3D3D3D]"  style="text-transform: uppercase;
           font-feature-settings: 'case' on">ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
           </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
       </div>
     </a>
   </div>
@@ -509,10 +533,10 @@
           <img src="./img/Frame21.png" alt="Slide 1" class="brightness-75 max-xl:min-h-[605px]">
           <div class="slide-text">
             <div class="flex items-center gap-2">
-              <button class="bg-white text-sm text-[#474747] px-2 py-1.5 font-normal">ურბანული განვითარება</button>
-              <p class=" text-sm font-normal">13 ივნისი, 23:03</p>
+              <button class="bg-white text-xs xl:text-[13px] text-[#3D3D3D] px-2 py-1.5 font-medium">ურბანული განვითარება</button>
+              <p class=" text-xs xl:text-[13px] font-medium">13 ივნისი, 23:03</p>
             </div>
-            <p class="text-3xl text-center pt-4 font-Umgeo font-bold" >urbanuli <br> ganviTrebis <br>
+            <p class="text-3xl text-center pt-4 font-Umgeo font-bold">urbanuli <br> ganviTrebis <br>
                                                                         etapebi da maTi <br> miRwevis <br>
                                                                         meTodebi
             </p>
@@ -524,10 +548,10 @@
           <img src="./img/Frame21.png" alt="Slide 1" class="brightness-75 max-xl:min-h-[605px]">
           <div class="slide-text">
             <div class="flex items-center gap-2">
-              <button class="bg-white text-sm text-[#474747] px-2 py-1.5 font-normal">ურბანული განვითარება</button>
-              <p class=" text-sm font-normal">13 ივნისი, 23:03</p>
+              <button class="bg-white text-xs xl:text-[13px] text-[#3D3D3D] px-2 py-1.5 font-medium">ურბანული განვითარება</button>
+              <p class=" text-xs xl:text-[13px] font-medium">13 ივნისი, 23:03</p>
             </div>
-            <p class="text-3xl text-center pt-4 font-Umgeo font-bold" >urbanuli <br> ganviTrebis <br>
+            <p class="text-3xl text-center pt-4 font-Umgeo font-bold">urbanuli <br> ganviTrebis <br>
                                                                         etapebi da maTi <br> miRwevis <br>
                                                                         meTodebi
             </p>
@@ -539,10 +563,10 @@
           <img src="./img/Frame21.png" alt="Slide 1" class="brightness-75 max-xl:min-h-[605px]">
           <div class="slide-text">
             <div class="flex items-center gap-2">
-              <button class="bg-white text-sm text-[#474747] px-2 py-1.5 font-normal">ურბანული განვითარება</button>
-              <p class=" text-sm font-normal">13 ივნისი, 23:03</p>
+              <button class="bg-white text-xs xl:text-[13px] text-[#3D3D3D] px-2 py-1.5 font-medium">ურბანული განვითარება</button>
+              <p class=" text-xs xl:text-[13px] font-medium">13 ივნისი, 23:03</p>
             </div>
-            <p class="text-3xl text-center pt-4 font-Umgeo font-bold" >urbanuli <br> ganviTrebis <br>
+            <p class="text-3xl text-center pt-4 font-Umgeo font-bold">urbanuli <br> ganviTrebis <br>
                                                                         etapebi da maTi <br> miRwevis <br>
                                                                         meTodebi
             </p>
@@ -554,10 +578,10 @@
           <img src="./img/Frame21.png" alt="Slide 1" class="brightness-75 max-xl:min-h-[605px]">
           <div class="slide-text">
             <div class="flex items-center gap-2">
-              <button class="bg-white text-sm text-[#474747] px-2 py-1.5 font-normal">ურბანული განვითარება</button>
-              <p class=" text-sm font-normal">13 ივნისი, 23:03</p>
+              <button class="bg-white text-xs xl:text-[13px] text-[#3D3D3D] px-2 py-1.5 font-medium">ურბანული განვითარება</button>
+              <p class=" text-xs xl:text-[13px] font-medium">13 ივნისი, 23:03</p>
             </div>
-            <p class="text-3xl text-center pt-4 font-Umgeo font-bold" >urbanuli <br> ganviTrebis <br>
+            <p class="text-3xl text-center pt-4 font-Umgeo font-bold">urbanuli <br> ganviTrebis <br>
                                                                         etapebi da maTi <br> miRwevis <br>
                                                                         meTodebi
             </p>
@@ -569,95 +593,157 @@
   </div>
 </section>
 <section  class="px-4 pb-64">
-  <div class="flex justify-between mb-6 ">
+  <div class="flex justify-between items-center mb-6 ">
     <h1 class="text-md font-bold text-[#333333] font-helvetica-neue" style="text-transform: uppercase;
-    font-feature-settings: 'case' on">რჩევები პროფესიონალებიზგან</h1>
-    <a href="" class="text-sm text-[#474747]  ">სრულად ნახვა</a>
+    font-feature-settings: 'case' on">დანარჩენი სიახლეები</h1>
+    <div class="flex items-center gap-2">
+      <div class="relative hidden xl:block">
+        <div id="date-container" class="flex items-center bg-white rounded-[4px] border border-[#FAFAFA] px-3">
+          <input
+              placeholder="თარიღი"
+              class="textbox-n input block text-[#A3A3A3]  outline-none appearance-none w-[200px]"
+              type="text"
+              id="date-input"
+          />
+          <img src="./img/calkenda.svg" alt="">
+      </div>
+
+      </div>
+
+        <div class="relative  hidden xl:block">
+          <select class="cursor-pointer block w-full   py-[10px] pr-[150px] pl-2  text-[#A3A3A3] appearance-none bg-white">
+            <option value="1">კატეგორია</option><option value="2">select</option><option value="3">select</option>
+         
+          </select>
+          <svg class="absolute right-4 w-4 h-4 absolute right-4 top-[25%] w-6 h-6 " width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.75 7.5L10 13.75L16.25 7.5" stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </div>
+          <button onclick="showFilter()" class=" flex items-center justify-between w-full xl:hidden cursor-pointer block w-full   py-[10px] px-2  text-[#A3A3A3] appearance-none bg-white">ფილტრი 
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.28809 3.75H16.7124C16.8335 3.75 16.952 3.78517 17.0534 3.85124C17.1549 3.9173 17.235 4.01142 17.284 4.12215C17.333 4.23288 17.3487 4.35546 17.3293 4.47498C17.31 4.5945 17.2563 4.70583 17.1749 4.79542L12.0378 10.4462C11.9332 10.5613 11.8752 10.7112 11.8752 10.8666V15.2905C11.8752 15.3934 11.8498 15.4947 11.8013 15.5854C11.7527 15.6761 11.6825 15.7535 11.5969 15.8105L9.09693 17.4772C9.0028 17.54 8.89341 17.576 8.78042 17.5814C8.66743 17.5869 8.55507 17.5616 8.45533 17.5082C8.35559 17.4548 8.27221 17.3754 8.21408 17.2784C8.15595 17.1813 8.12524 17.0703 8.12524 16.9572V10.8666C8.12524 10.7112 8.06729 10.5613 7.9627 10.4462L2.82562 4.79542C2.74418 4.70583 2.6905 4.5945 2.67114 4.47498C2.65177 4.35546 2.66753 4.23288 2.71651 4.12215C2.7655 4.01142 2.84559 3.9173 2.94706 3.85124C3.04853 3.78517 3.167 3.75 3.28809 3.75V3.75Z" stroke="#474747" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              </button>
+        </div>
   </div>
   <div class="grid  grid-cols-1 xl:grid-cols-2 gap-8 mb-7">
     <div class="grid grid-cols-1 gap-4">
       <a class="grid grid-cols-1 xl:grid-cols-2 xl:gap-48 gap-2 bg-white p-3 xl:py-[22px] xl:px-6 border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
         <div class="order-2 xl:order-1">
-          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold">
+          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold">
             ურბანული განვითარება
           </button>
-          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal" style="text-transform: uppercase; font-feature-settings: 'case' on">
+          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal text-[#3D3D3D]" style="text-transform: uppercase; font-feature-settings: 'case' on">
             ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
           </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
-        </div>
-        <img class="max-md:w-full h-full object-cover order-1 xl:order-2" src="./img/Frame 1.png" alt="">
-      </a>
-
-      <a class="grid grid-cols-1 xl:grid-cols-2 xl:gap-48 gap-2 bg-white p-3 xl:py-[22px] xl:px-6 border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
-        <div class="order-2 xl:order-1">
-          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold">
-            ურბანული განვითარება
-          </button>
-          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal" style="text-transform: uppercase; font-feature-settings: 'case' on">
-            ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
-          </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
         </div>
         <img class="max-md:w-full h-full object-cover order-1 xl:order-2" src="./img/Frame 1.png" alt="">
       </a>
       <a class="grid grid-cols-1 xl:grid-cols-2 xl:gap-48 gap-2 bg-white p-3 xl:py-[22px] xl:px-6 border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
         <div class="order-2 xl:order-1">
-          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold">
+          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold">
             ურბანული განვითარება
           </button>
-          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal" style="text-transform: uppercase; font-feature-settings: 'case' on">
+          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal text-[#3D3D3D]" style="text-transform: uppercase; font-feature-settings: 'case' on">
             ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
           </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
         </div>
         <img class="max-md:w-full h-full object-cover order-1 xl:order-2" src="./img/Frame 1.png" alt="">
       </a>
+      <a class="grid grid-cols-1 xl:grid-cols-2 xl:gap-48 gap-2 bg-white p-3 xl:py-[22px] xl:px-6 border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
+        <div class="order-2 xl:order-1">
+          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold">
+            ურბანული განვითარება
+          </button>
+          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal text-[#3D3D3D]" style="text-transform: uppercase; font-feature-settings: 'case' on">
+            ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
+          </h2>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
+        </div>
+        <img class="max-md:w-full h-full object-cover order-1 xl:order-2" src="./img/Frame 1.png" alt="">
+      </a>
+     
     </div>
     <div class="grid grid-cols-1 gap-4">
       <a class="grid grid-cols-1 xl:grid-cols-2 xl:gap-48 gap-2 bg-white p-3 xl:py-[22px] xl:px-6 border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
         <div class="order-2 xl:order-1">
-          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold">
+          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold">
             ურბანული განვითარება
           </button>
-          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal" style="text-transform: uppercase; font-feature-settings: 'case' on">
+          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal text-[#3D3D3D]" style="text-transform: uppercase; font-feature-settings: 'case' on">
             ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
           </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
         </div>
         <img class="max-md:w-full h-full object-cover order-1 xl:order-2" src="./img/Frame 1.png" alt="">
       </a>
       <a class="grid grid-cols-1 xl:grid-cols-2 xl:gap-48 gap-2 bg-white p-3 xl:py-[22px] xl:px-6 border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
         <div class="order-2 xl:order-1">
-          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold">
+          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold">
             ურბანული განვითარება
           </button>
-          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal" style="text-transform: uppercase; font-feature-settings: 'case' on">
+          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal text-[#3D3D3D]" style="text-transform: uppercase; font-feature-settings: 'case' on">
             ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
           </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
         </div>
         <img class="max-md:w-full h-full object-cover order-1 xl:order-2" src="./img/Frame 1.png" alt="">
       </a>
       <a class="grid grid-cols-1 xl:grid-cols-2 xl:gap-48 gap-2 bg-white p-3 xl:py-[22px] xl:px-6 border border-white hover:border-[#474747] transition-colors duration-500 ease-in-out cursor-pointer">
         <div class="order-2 xl:order-1">
-          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#474747] font-bold">
+          <button class="text-xs border border-[#F0F0F0] px-[8px] py-[6px] text-[#3D3D3D] font-bold">
             ურბანული განვითარება
           </button>
-          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal" style="text-transform: uppercase; font-feature-settings: 'case' on">
+          <h2 class="mt-6 mb-16 font-helvetica-neue font-normal text-[#3D3D3D]" style="text-transform: uppercase; font-feature-settings: 'case' on">
             ბიოფილური დიზაინი: ბუნების შემოტანა შიგნით
           </h2>
-          <p class="text-xs text-[#C2C2C2]">13 ივნისი, 23:03</p>
+          <p class="text-xs text-[#707070]">13 ივნისი, 23:03</p>
         </div>
         <img class="max-md:w-full h-full object-cover order-1 xl:order-2" src="./img/Frame 1.png" alt="">
       </a>
      
   </div>
   </div>  
-  <a class="  flex items-center justify-center  py-3.5 px-24 bg-white text-center  font-helvetica-neue font-normal" style="text-transform: uppercase; font-feature-settings: 'case' on" href="">
+  <a class="  flex items-center justify-center  py-3.5 px-24 bg-white text-center  font-helvetica-neue font-medium text-[#2E2E2E]" style="text-transform: uppercase; font-feature-settings: 'case' on" href="">
     მეტის ნახვა
   </a>
-
+  <div class="mobile-filter bg-white hidden"  id="mobileFilter">
+    <div class="h-[100vh] fixed inset-0 bg-black/25 backdrop-blur-md" 
+    >
+        <div class="flex flex-col items-center relative top-[50%] gap-[16px] xl:gap-0 h-[50%] py-6 px-4 bg-white">
+          <div class="flex items-center justify-between w-full">
+            <p class="font-helvetica-neue font-medium" style="text-transform: uppercase;
+            font-feature-settings: 'case' on">ფილტრი</p>
+            <button id="X" onclick="showFilter()" >
+              <img src="./img/Icons.svg" alt="">
+            </button >
+          </div>
+              <div class="relative w-full block">
+                <div id="date-container-mob" class="flex items-center bg-white justify-between rounded-[4px] border border-[#FAFAFA] px-3">
+                  <input
+                      placeholder="თარიღი"
+                      class="textbox-n input block text-[#A3A3A3]  outline-none appearance-none w-[200px]"
+                      type="text"
+                      id="date-input-mob"
+                  />
+                  <img src="./img/calkenda.svg" alt="">
+              </div>
+      
+              </div>
+              <div class="relative  w-full">
+                <select class="cursor-pointer block w-full   py-[10px] pr-[50px] pl-2  text-[#A3A3A3] appearance-none bg-white  rounded-[4px] border border-[#FAFAFA] ">
+                  <option value="1">კატეგორია</option><option value="2">select</option><option value="3">select</option>
+               
+                </select>
+                <svg class="absolute right-4 w-4 h-4 absolute right-4 top-[25%] w-6 h-6 " width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.75 7.5L10 13.75L16.25 7.5" stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+        </div>
+    </div>
+  </div>
 </section>
 
 <footer class="bg-white px-4 py-6 flex flex-col gap-28 md:gap-40">
@@ -665,7 +751,7 @@
     <img src="./img/Logo.svg" alt="">
 
    <div>
-    <p class="font-light text-[#202020]">გამოგვყევით
+    <p class="font-light text-[#202020] font-helvetica-neue font-medium">გამოგვყევით
     </p>
     <div class="flex items-center gap-2">
       <a href="" class="p-3"><img src="./img/uim_facebook-f.svg" alt=""></a>
@@ -740,6 +826,27 @@ var swiperNew = new Swiper(".myNewSwiper", {
         }
     }
    
+    function showFilter() {
+        var mobileFilter = document.getElementById('mobileFilter');
+        var filterX = document.getElementById('X');
+        var body = document.body;
+
+        if (mobileFilter.style.display === 'none' || mobileFilter.style.display === '') {
+            mobileFilter.style.display = 'block';
+            filterX.style.display = 'block';
+            body.style.overflowY = "hidden";
+        } else {
+            mobileFilter.style.display = 'none';
+            filterX.style.display = 'none';
+            body.style.overflowY = "auto";
+        }
+
+        if (window.innerWidth < 1280) {
+            mobileFilter.style.display = isOpen ? 'block' : 'none';
+    } else {
+        mobileFilter.style.display = 'none';
+    }
+    }
 
     function handleResize() {
     const mobileMenu = document.getElementById('mobileMenu');
@@ -753,5 +860,40 @@ var swiperNew = new Swiper(".myNewSwiper", {
 
   window.addEventListener('resize', handleResize);
   handleResize();
+
+  
+  const dateContainer = document.getElementById('date-container');
+        const dateInput = document.getElementById('date-input');
+
+        dateContainer.addEventListener('click', () => {
+            if (dateInput.type === 'text') {
+                dateInput.type = 'date';
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!dateContainer.contains(event.target)) {
+                if (dateInput.type === 'date') {
+                    dateInput.type = 'text';
+                }
+            }
+        });
+
+        const dateContainerMob = document.getElementById('date-container-mob');
+        const dateInputMob = document.getElementById('date-input-mob');
+
+        dateContainerMob.addEventListener('click', () => {
+            if (dateInputMob.type === 'text') {
+              dateInputMob.type = 'date';
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!dateContainerMob.contains(event.target)) {
+                if (dateInputMob.type === 'date') {
+                  dateInputMob.type = 'text';
+                }
+            }
+        });
 </script>
 </html>
